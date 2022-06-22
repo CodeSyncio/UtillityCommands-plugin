@@ -5,8 +5,13 @@ api-version: 1.18
 commands:
   strike:
     description: hit a specified player with lightning
+  boat:
+    description: spawn a boat at the players location
 
 permissions:
   Util.strike:
+    description: for being able to use the Strike command
+    default: op
+  Util.boat:
     description: for being able to use the Strike command
     default: op
