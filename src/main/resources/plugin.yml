@@ -1,0 +1,12 @@
+name: UtilityCommands
+version: '${project.version}'
+main: projects.utilitycommands.UtilityCommands
+api-version: 1.18
+commands:
+  strike:
+    description: hit a specified player with lightning
+
+permissions:
+  Util.strike:
+    description: for being able to use the Strike command
+    default: op
