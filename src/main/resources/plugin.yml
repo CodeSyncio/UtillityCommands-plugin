@@ -9,6 +9,8 @@ commands:
     description: spawn a boat at the players location
   tphere:
     description: teleport a given player to ur location
+  setbreak:
+    description: enable or disable block breaking server wide
 
 permissions:
   Util.strike:
@@ -19,4 +21,10 @@ permissions:
     default: op
   Util.tphere:
     description: for being able to use the tphere command
+    default: op
+  Util.setbreak:
+    description: used to acces the setbreak command
+    default: op
+  Util.setbreak.bypass:
+    description: used to BYPASS the nobreak function
     default: op
