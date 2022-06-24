@@ -1,6 +1,5 @@
 package projects.utilitycommands;
-import org.bukkit.event.Listener;
-import org.bukkit.plugin.Plugin;
+
 import org.bukkit.plugin.java.JavaPlugin;
 import projects.utilitycommands.Commands.LightningStrike;
 import projects.utilitycommands.Commands.NoBreak;
@@ -13,11 +12,6 @@ public final class UtilityCommands extends JavaPlugin {
     @Override
     public void onEnable() {
 
-        this.saveDefaultConfig();
-
-
-
-        this.getConfig().set("BlockBreakAllowed", true);
 
 
         getCommand("strike").setExecutor(new LightningStrike());
@@ -27,11 +21,13 @@ public final class UtilityCommands extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents( new BlockBreak(this),this);
 
-        this.getConfig().set("BlockBreakAllowed", true);
+
+        this.saveDefaultConfig();
+        this.getConfig().set("BlockBreakAllowed",this.getConfig().getBoolean("BlockBreakAllowed"));
         this.saveConfig();
     }
     @Override
     public void onDisable() {
-
+        this.saveConfig();
     }
 }
